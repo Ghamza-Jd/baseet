@@ -11,10 +11,10 @@ Forked from [Archie Theme](https://github.com/athul/archie)
 
 ## Feature
 
-- Google Analytics Script
+- Google Analytics
 - Callouts
 - Tags
-- Auto Dark Mode(based on system theme)
+- Auto Dark Mode (based on system theme)
 - Dark/Light Mode toggle
 - tl:dr; frontamatter
 - Cache busting for CSS files
