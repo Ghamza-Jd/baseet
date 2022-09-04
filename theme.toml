@@ -3,13 +3,13 @@
 
 name = "Baseet"
 license = "MIT"
-licenselink = "https://github.com/athul/archie/blob/master/LICENSE"
+licenselink = "https://github.com/Ghamza-Jd/archie/blob/master/LICENSE"
 description = "Baseet is a minimal and clean theme for hugo with a markdown-ish UI."
-homepage = "https://github.com/athul/archie"
+homepage = "https://github.com/Ghamza-Jd/baseet"
 tags = ["blog", "simple", "responsive", "minimal", "tags", "personal", "clean", "shortcodes"]
 features = ["blog", "Clean and minimal", "Responsive", "Syntax highlighting",]
 min_version = "0.41"
 
 [author]
 name = "Hamza Jadid"
-homepage = "https://github.com/athul"
+homepage = "https://github.com/Ghamza-Jd"
