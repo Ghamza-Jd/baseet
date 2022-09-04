@@ -7,7 +7,7 @@ Forked from [Archie Theme](https://github.com/athul/archie)
 
 ## Demo
 
-[Check the Demo](https://blog.ghamza.dev) hosted on GitHub Pages :smile:. You can find the source code to that in the `site` branch of this repository
+[Check the Demo](https://blog.ghamza.dev) hosted on GitHub Pages.
 
 ## Feature
 
@@ -129,13 +129,14 @@ crossorigin = "anonymous"
 
 ### Favicon
 Favicon are defined inside the Params.
+You can add some of those fields, I like to put all of them just to see green checks in lighthouse.
 
-| Name             | Description | Possible Values and Example |
-| ---------------- | ----------- | --------------------------- |
-| apple_touch_icon |             |                             |
-| s32              |             |                             |
-| s16              |             |                             |
-| manifest         |             |                             |
+| Name             | Description                      | Possible Values and Example |
+| ---------------- | -------------------------------- | --------------------------- |
+| apple_touch_icon | For iOS and Android devices      |                             |
+| s32              | Size for taskbar shortcutFavicon |                             |
+| s16              | Size for browser Favicon         |                             |
+| manifest         | For extensions                   |                             |
 
 Example:
 ```toml
