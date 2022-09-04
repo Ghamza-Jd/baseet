@@ -48,92 +48,135 @@ tags: [tag names] (optional)
 ---
 ```
 
+## Docs
+
+### Meta
+| Name      | Descritpion                                                                  | Possible Values  and Example |
+| --------- | ---------------------------------------------------------------------------- | ---------------------------- |
+| baseURL   | The website's base url                                                       | `https://my.john.doe`        |
+| language  | The website's language to help the page for indexing                         | `en-us`                      |
+| title     | Blog's title - its going to appear at the top of the index page              | `John Doe Blog`              |
+| theme     | The theme you're using                                                       | `ghamza-archie`              |
+| copyright | a copy right message that is going to be displayed at the end of the website | `© John Doe`                 |
+
+Example:
+```toml
+baseURL = "https://blog.ghamza.dev"
+language = "en-us"
+title = "Ghamza Blog"
+theme = "baseet"
+copyright = "© Hamza Jadid"
+```
+
+### Params
+| Name         | Description                                                                            | Possible Values and Example |
+| ------------ | -------------------------------------------------------------------------------------- | --------------------------- |
+| mode         | Theme mode                                                                             | `light`, `dark`, or `auto`  |
+| useCDN       | A flag to indecate if you want to get the font and icons from a CDN                    | `true` or `false`           |
+| subtitle     | A small description that is going to appear right under the website's title            | `An awesome blogger`        |
+| support_text | If you have a support message and you want to display it accross your blog put it here | `Support Ukraine 🇺🇦`         |
+| gtag_key     | If you want to add google analytics, add your gtag key in this field                   | `G-ABCD12345`               |
+
+Example:
+```toml
+[params]
+mode = "auto"
+useCDN = true
+subtitle = "Personal blog to share computer science and software engineering articles."
+support_text = "🕊️🇵🇸 I stand with humanity, I stand with Palestine 🇵🇸🕊️"
+gtag_key = "G-ABCD1234"
+```
+
+#### Giscus
+Giscus is defined inside the Params.
+Giscus can make us add comments to our websites using Github's discussion.
+
+| Name              | Description                                     | Possible Values and Example |
+| ----------------- | ----------------------------------------------- | --------------------------- |
+| enabled           | If you want to enable Giscus, defaults to false | `true` or `false`           |
+| repo              | Repo on where the discussions are saved         |                             |
+| repo_id           |                                                 |                             |
+| category_id       |                                                 |                             |
+| reactions_enabled |                                                 | `1` or `0`                  |
+| mapping           |                                                 |                             |
+| emit_metadata     |                                                 |                             |
+| input_position    |                                                 |                             |
+| theme             |                                                 |                             |
+| loading           |                                                 |                             |
+| lang              |                                                 |                             |
+| crossorigin       |                                                 |                             |
+
+Example:
+```toml
+[params.giscus]
+enabled = true
+crossorigin = "anonymous"
+repo = "username/repo"
+repo_id = "R_repo_id"
+category_id = "DIC_category_id"
+mapping = "url"
+reactions_enabled = 1
+emit_metadata = 1
+input_position = "top"
+theme = "preferred_color_scheme"
+loading = "lazy"
+lang = "en"
+```
+
+### Favicon
+Favicon are defined inside the Params.
+
+| Name             | Description | Possible Values and Example |
+| ---------------- | ----------- | --------------------------- |
+| apple_touch_icon |             |                             |
+| s32              |             |                             |
+| s16              |             |                             |
+| manifest         |             |                             |
+
+Example:
+```toml
+[params.favicon]
+apple_touch_icon = "https://static.ghamza.dev/icons/apple-touch-icon.png"
+s32 = "https://static.ghamza.dev/icons/favicon-32x32.png"
+s16 = "https://static.ghamza.dev/icons/favicon-16x16.png"
+manifest = "https://static.ghamza.dev/icons/site.webmanifest"
+```
+
+### Social
+Social are dfined inside the Params.
+It's an array of `social` object than contains `name`, `icon` and `url`
+
+Example:
+```toml
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/Ghamza-Jd"
+
+[[params.social]]
+name = "rss"
+icon = "rss"
+url = "https://blog.ghamza.dev/index.xml"
+```
+## Menu
+The menu contains a `main` which is an array that contains a `name`, `url` and a `weight`.
+
+Example:
+```toml
+[[menu.main]]
+name = "Archives"
+url = "/posts"
+weight = 1
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 2
+```
+
+---
+
 ## Credits
 
 Forked from [Archie Theme](https://github.com/athul/archie) and Licensed under MIT License
 Inspired by design of blog.jse.li
-
----
-
-## Config of the Demo Site
-
-```json
-{
-    "baseURL": "https://blog.ghamza.dev",
-    "language": "en-us",
-    "title": "Ghamza Blog",
-    "theme": "ghamza-archie",
-    "copyright": "© Hamza Jadid",
-    "pygmentsstyle": "monokai",
-    "pygmentscodefences": true,
-    "pygmentscodefencesguesssyntax": true,
-    "paginate": 10,
-    "params": {
-        "mode": "auto",
-        "useCDN": true,
-        "subtitle": "Personal blog to share computer science and software engineering articles.",
-        "support_text": "🕊️🇵🇸 I stand with humanity, I stand with Palestine 🇵🇸🕊️",
-        "gtag_key": "G-M9GYS9Z1XC",
-        "giscus": {
-            "enabled": true,
-            "data": {
-                "repo": "ghamza-blog/ghamza-blog.github.io",
-                "repo_id": "R_kgDOHMIi9w",
-                "category_id": "DIC_kwDOHMIi984COoB4",
-                "mapping": "url",
-                "reactions_enabled": 1,
-                "emit_metadata": 1,
-                "input_position": "top",
-                "theme": "preferred_color_scheme",
-                "loading": "lazy",
-                "lang": "en"
-            },
-            "crossorigin": "anonymous"
-        },
-        "favicon": {
-            "apple_touch_icon": "https://static.ghamza.dev/icons/apple-touch-icon.png",
-            "s32": "https://static.ghamza.dev/icons/favicon-32x32.png",
-            "s16": "https://static.ghamza.dev/icons/favicon-16x16.png",
-            "manifest": "https://static.ghamza.dev/icons/site.webmanifest"
-        },
-        "social": [
-            {
-                "name": "GitHub",
-                "icon": "github",
-                "url": "https://github.com/Ghamza-Jd"
-            },
-            {
-                "name": "Facebook",
-                "icon": "facebook",
-                "url": "https://www.facebook.com/ghamza.tech"
-            },
-            {
-                "name": "LinkedIn",
-                "icon": "linkedin",
-                "url": "https://www.linkedin.com/in/hamza-jadid"
-            },
-            {
-                "name": "rss",
-                "icon": "rss",
-                "url": "https://blog.ghamza.dev/index.xml"
-            }
-        ]
-    },
-    "menu": {
-        "main": [
-            {
-                "name": "Archives",
-                "url": "/posts",
-                "weight": 1
-            },
-            {
-                "name": "Tags",
-                "url": "/tags",
-                "weight": 2
-            }
-        ]
-    }
-}
-```
-
----

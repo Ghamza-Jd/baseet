@@ -332,52 +332,52 @@ svg {
 .highlight pre code[class*='language-shell']::before,
 .highlight pre code[class*='language-bash']::before,
 .highlight pre code[class*='language-sh']::before {
-  content: 'shell 🐚';
+  content: 'shell';
   background: green;
   color: white;
 }
 
 .highlight pre code[class*='language-json']::before {
-  content: '{json}';
+  content: 'json';
   background: dodgerblue;
   color: #000000;
 }
 
 .highlight pre code[class*='language-python']::before,
 .highlight pre code[class*='language-py']::before {
-  content: 'python 🐍';
+  content: 'py';
   background: blue;
   color: yellow;
 }
 
 .highlight pre code[class*='language-css']::before {
-  content: 'css 💅🏻';
+  content: 'css';
   background: cyan;
   color: black;
 }
 
 .highlight pre code[class*='language-go']::before {
-  content: 'Go 🐿';
+  content: 'Go';
   background: cyan;
   color: royalblue;
 }
 
 .highlight pre code[class*='language-md']::before,
 .highlight pre code[class*='language-md']::before {
-  content: 'Markdown ⬇️';
+  content: 'Markdown ';
   background: royalblue;
   color: whitesmoke;
 }
 
 .highlight pre code[class*='language-toml']::before {
-  content: '[TOML]';
+  content: 'TOML';
   background: rosybrown;
   color: brown;
 }
 
 .highlight pre code[class*='language-rust']::before,
 .highlight pre code[class*='language-rs']::before {
-  content: 'Rust 🦀';
+  content: 'Rust';
   background: white;
   color: black;
 }
