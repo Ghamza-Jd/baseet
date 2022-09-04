@@ -88,29 +88,32 @@ gtag_key = "G-ABCD1234"
 ```
 
 #### Giscus
-Giscus is defined inside the Params.
-Giscus can make us add comments to our websites using Github's discussion.
+[Giscus](https://giscus.app/) can make us add comments to our websites using Github's discussion.
 
-| Name              | Description                                     | Possible Values and Example |
-| ----------------- | ----------------------------------------------- | --------------------------- |
-| enabled           | If you want to enable Giscus, defaults to false | `true` or `false`           |
-| repo              | Repo on where the discussions are saved         |                             |
-| repo_id           |                                                 |                             |
-| category_id       |                                                 |                             |
-| reactions_enabled |                                                 | `1` or `0`                  |
-| mapping           |                                                 |                             |
-| emit_metadata     |                                                 |                             |
-| input_position    |                                                 |                             |
-| theme             |                                                 |                             |
-| loading           |                                                 |                             |
-| lang              |                                                 |                             |
-| crossorigin       |                                                 |                             |
+Giscus is defined inside the Params.
+
+We'll nothing to think about here, all you need to do is go to the [Giscus Web App](https://giscus.app/), fill in the form and then come back and replace the values.
+
+Replacement:
+| Theme Config      | Values from Giscus     | Comment                                                                          |
+| ----------------- | ---------------------- | -------------------------------------------------------------------------------- |
+| enabled           | -                      | This is a flag for the template to conditionally add Giscus, defaults to `false` |
+| repo              | data-repo              | -                                                                                |
+| repo_id           | data-repo-id           | -                                                                                |
+| category_id       | data-category-id       | -                                                                                |
+| mapping           | data-mapping           | -                                                                                |
+| reactions_enabled | data-reactions-enabled | -                                                                                |
+| emit_metadata     | data-emit-metadata     | -                                                                                |
+| input_position    | data-input-position    | -                                                                                |
+| theme             | data-theme             | -                                                                                |
+| loading           | data-loading           | -                                                                                |
+| lang              | data-lang              | -                                                                                |
+| crossorigin       | crossorigin            | -                                                                                |
 
 Example:
 ```toml
 [params.giscus]
 enabled = true
-crossorigin = "anonymous"
 repo = "username/repo"
 repo_id = "R_repo_id"
 category_id = "DIC_category_id"
@@ -121,6 +124,7 @@ input_position = "top"
 theme = "preferred_color_scheme"
 loading = "lazy"
 lang = "en"
+crossorigin = "anonymous"
 ```
 
 ### Favicon
