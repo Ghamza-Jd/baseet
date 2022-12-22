@@ -51,6 +51,7 @@ tags: [tag names] (optional)
 ## Docs
 
 ### Meta
+
 | Name      | Descritpion                                                                  | Possible Values  and Example |
 | --------- | ---------------------------------------------------------------------------- | ---------------------------- |
 | baseURL   | The website's base url                                                       | `https://my.john.doe`        |
@@ -60,6 +61,7 @@ tags: [tag names] (optional)
 | copyright | a copy right message that is going to be displayed at the end of the website | `© John Doe`                 |
 
 Example:
+
 ```toml
 baseURL = "https://blog.ghamza.dev"
 language = "en-us"
@@ -69,6 +71,7 @@ copyright = "© Hamza Jadid"
 ```
 
 ### Params
+
 | Name         | Description                                                                            | Possible Values and Example |
 | ------------ | -------------------------------------------------------------------------------------- | --------------------------- |
 | mode         | Theme mode                                                                             | `light`, `dark`, or `auto`  |
@@ -78,6 +81,7 @@ copyright = "© Hamza Jadid"
 | gtag_key     | If you want to add google analytics, add your gtag key in this field                   | `G-ABCD12345`               |
 
 Example:
+
 ```toml
 [params]
 mode = "auto"
@@ -88,6 +92,7 @@ gtag_key = "G-ABCD1234"
 ```
 
 #### Giscus
+
 [Giscus](https://giscus.app/) can make us add comments to our websites using Github's discussion.
 
 Giscus is defined inside the Params.
@@ -111,6 +116,7 @@ Replacement:
 | crossorigin       | crossorigin            | -                                                                                |
 
 Example:
+
 ```toml
 [params.giscus]
 enabled = true
@@ -128,6 +134,7 @@ crossorigin = "anonymous"
 ```
 
 ### Favicon
+
 Favicon are defined inside the Params.
 You can add some of those fields, I like to put all of them just to see green checks in lighthouse.
 
@@ -139,6 +146,7 @@ You can add some of those fields, I like to put all of them just to see green ch
 | manifest         | For extensions                   |                             |
 
 Example:
+
 ```toml
 [params.favicon]
 apple_touch_icon = "https://static.ghamza.dev/icons/apple-touch-icon.png"
@@ -148,10 +156,12 @@ manifest = "https://static.ghamza.dev/icons/site.webmanifest"
 ```
 
 ### Social
+
 Social are dfined inside the Params.
 It's an array of `social` object than contains `name`, `icon` and `url`
 
 Example:
+
 ```toml
 [[params.social]]
 name = "GitHub"
@@ -163,10 +173,13 @@ name = "rss"
 icon = "rss"
 url = "https://blog.ghamza.dev/index.xml"
 ```
+
 ## Menu
+
 The menu contains a `main` which is an array that contains a `name`, `url` and a `weight`.
 
 Example:
+
 ```toml
 [[menu.main]]
 name = "Archives"
