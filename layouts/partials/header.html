@@ -21,7 +21,7 @@
 	{{- if isset .Site.Params.favicon "manifest" -}}
 	<link rel="manifest" href={{ .Site.Params.favicon.manifest }}>
 	{{- end -}}
-	
+
 	{{- if isset .Site.Params "gtag_key" -}}
 	<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.gtag_key }}"></script>
 	<script>
@@ -71,6 +71,9 @@
 		.Site.Params.mode "auto" }}media="(prefers-color-scheme: dark)" {{ end }} {{ if eq .Site.Params.mode "toggle"
 		}}disabled{{ end }} />
 	{{ end }}
+
+	<!-- Custom JS -->
+	<script src="{{ .Site.BaseURL }}js/main.js"></script>
 
 	<!-- Custom CSS style get applied last -->
 	{{- if isset .Site.Params "customcss" }}

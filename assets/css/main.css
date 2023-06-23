@@ -371,7 +371,7 @@ svg {
 .highlight pre code[class*='language-toml']::before {
   content: 'TOML';
   background: rosybrown;
-  color: brown;
+  color: black;
 }
 
 .highlight pre code[class*='language-rust']::before,
