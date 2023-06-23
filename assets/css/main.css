@@ -115,7 +115,6 @@ code {
 }
 
 pre {
-  background-color: #ececec;
   line-height: 1.4;
   overflow-x: auto;
   padding: 1em;
@@ -204,7 +203,7 @@ h6::before {
 footer {
   display: flex;
   align-items: center;
-  border-top: 0.4rem dotted var(--bordercl);
+  border-top: 0.4rem dashed var(--bordercl);
   padding: 2rem 0rem;
   margin-top: 2rem;
 }

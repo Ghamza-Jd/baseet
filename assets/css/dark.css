@@ -10,13 +10,13 @@ body {
 }
 
 ::selection {
-  background: red;
+  background: #007A3D;;
   color: #fff;
   text-shadow: none;
 }
 
 hr {
-  border-top: 3px dotted #007A3D;
+  border-top: 4px dashed var(--bordercl);
 }
 code {
   background-color: var(--bordercl);
@@ -26,7 +26,7 @@ code {
   border-radius: 2%;
 }
 pre {
-  background-color: #272822;
+  background-color: var(--bordercl) !important;
   line-height: 1.4;
   overflow-x: auto;
   padding: 1em;
@@ -69,12 +69,12 @@ h6::before {
 }
 
 a {
-  border-bottom: 3px solid var(--darkMaincolor);
+  border-bottom: 3px dashed var(--darkMaincolor);
   color: inherit;
 }
 a:hover {
   background-color: var(--darkMaincolor);
-  color: black;
+  color: white;
 }
 
 .site-description a {
@@ -110,10 +110,9 @@ a:hover {
 }
 .draft-label {
   color: var(--darkMaincolor);
-  background-color: blue;
+  background-color: var(--bordercl);;
 }
 .highlight pre code[class*='language-']::before {
-  background-color: var(--bordercl);
   color: white;
   border-radius: 0 0 0.25rem 0.25rem;
   font-size: 12px;
@@ -170,4 +169,16 @@ a:hover {
   content: 'Markdown';
   background: royalblue;
   color: whitesmoke ;
+}
+.highlight pre code[class*='language-toml']::before {
+  content: 'TOML';
+  background: rosybrown;
+  color: black;
+}
+
+.highlight pre code[class*='language-rust']::before,
+.highlight pre code[class*='language-rs']::before {
+  content: 'Rust';
+  background: white;
+  color: black;
 }
